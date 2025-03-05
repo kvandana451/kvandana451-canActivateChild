@@ -1,6 +1,13 @@
 # App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0. But developed using Angular 16.
+
+Functional Requirements:<br>
+A company has an Admin Dashboard with multiple sections:<br>
+
+General Dashboard (/admin/dashboard) – Accessible to all logged-in users.<br>
+User Management (/admin/users) – Accessible only to Admins.<br>
+Reports (/admin/reports) – Accessible only to Managers and Admins.<br>
 
 ## Development server
 
