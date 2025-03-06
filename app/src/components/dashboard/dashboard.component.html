@@ -1,2 +1,9 @@
-<p>This is my General Dashboard!!</p>
+<nav>
+    <ul>
+        <li><a routerLink="/admin/dashboard">Admin Dashboard</a></li>
+        <li *ngIf="isAdmin()"><a routerLink="/admin/users">User Management</a></li>
+        <li *ngIf="isAdminorManager()"><a routerLink="/admin/reports">Reports</a></li>
+        <li><a routerLink="/logout" (click)="logout()">Logout</a></li>
+    </ul>
+</nav>
 <router-outlet></router-outlet> <!-- This is required for child routes to load -->
