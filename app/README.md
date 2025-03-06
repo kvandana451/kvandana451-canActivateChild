@@ -8,6 +8,7 @@ A company has an Admin Dashboard with multiple sections:<br>
 General Dashboard (/admin/dashboard) – Accessible to all logged-in users.<br>
 User Management (/admin/users) – Accessible only to Admins.<br>
 Reports (/admin/reports) – Accessible only to Managers and Admins.<br>
+I used data Property of a route.<br>
 
 Enhancements<br>
 Add a Login Page where users enter their credentials.<br>
