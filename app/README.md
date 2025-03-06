@@ -19,6 +19,10 @@ Guards covers this cases<br>
 If a user has logged in and their role is stored → Allowed if their role matches the route's allowed roles.<br>
 If no role is in localStorage (not logged in) → Redirected to /login<br>
 If a user has an invalid role (not in allowed roles) → Redirected to /login.<br>
+Now, UI Will Hide Unauthorized Links!<br>
+If admin, they see Users & Reports<br>
+If manager, they see Reports only<br>
+If user, they only see Dashboard<br>
 
 ## Development server
 
