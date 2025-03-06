@@ -9,6 +9,16 @@ General Dashboard (/admin/dashboard) – Accessible to all logged-in users.<br>
 User Management (/admin/users) – Accessible only to Admins.<br>
 Reports (/admin/reports) – Accessible only to Managers and Admins.<br>
 
+Enhancements<br>
+Add a Login Page where users enter their credentials.<br>
+Store the user's role in localStorage<br>
+Modify AuthService to fetch the role dynamically.<br>
+Protect the routes based on the logged-in role.<br>
+Guards covers this cases<br>
+If a user has logged in and their role is stored → Allowed if their role matches the route's allowed roles.<br>
+If no role is in localStorage (not logged in) → Redirected to /login<br>
+If a user has an invalid role (not in allowed roles) → Redirected to /login.<br>
+
 ## Development server
 
 To start a local development server, run:

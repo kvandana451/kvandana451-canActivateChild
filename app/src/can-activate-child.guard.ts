@@ -9,10 +9,11 @@ export const canActivateChildGuard: CanActivateChildFn = (
   const authService = inject(AuthService);
   const router = inject(Router);
   const role = authService.getUserRole();
+
   const allowedrole = childRoute.data['roles'];
-  if (allowedrole.includes(role)) {
+  if (localStorage.getItem('role') && allowedrole.includes(role)) {
     return true;
   }
-  router.navigate(['/not-authorized']); // Redirect if unauthorized
+  router.navigate(['/login']);
   return false;
 };

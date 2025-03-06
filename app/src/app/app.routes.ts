@@ -4,6 +4,8 @@ import { UserManagementComponent } from '../components/user-management/user-mana
 import { ReportsComponent } from '../components/reports/reports.component';
 import { NotAuthorisedComponent } from '../components/not-authorised/not-authorised.component';
 import { canActivateChildGuard } from '../can-activate-child.guard';
+import { LoginComponent } from '../components/login/login.component';
+import { AdminDashboardComponent } from '../components/admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
   {
@@ -11,7 +13,11 @@ export const routes: Routes = [
     component: DashboardComponent,
     canActivateChild: [canActivateChildGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      {
+        path: 'dashboard',
+        component: AdminDashboardComponent,
+        data: { roles: ['admin', 'user', 'manager'] },
+      },
       {
         path: 'users',
         component: UserManagementComponent,
@@ -28,5 +34,8 @@ export const routes: Routes = [
     path: 'not-authorized',
     component: NotAuthorisedComponent,
   },
-  { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' },
+  // { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
